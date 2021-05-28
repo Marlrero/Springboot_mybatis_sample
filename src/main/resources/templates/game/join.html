@@ -1,0 +1,26 @@
+
+<html>
+<body>
+<form action="/templates.game/main" method="post">
+    <h1>회원가입</h1>
+    <br/> <!--줄 바꿈-->
+    이름 : <input id="Name" name="Name" type = "text" class = "name_" placeholder = "이름을 입력하세요.">
+    <br/> <!--줄 바꿈-->
+    이메일 : <input id="Email" name="Email" type = "text" class = "email" placeholder = "이메일을 입력하세요.">
+    <br/>
+    ID : <input id="ID" name="ID" type = "text" class = "text-id" placeholder="아이디를 입력하세요.">
+    <input type = "button" id = "check" value = "중복확인">
+    <br/>
+    PW : <input id="PW" name="PW" type = "password" class = "text-pw" maxlength="8" placeholder="비밀번호를 입력하세요" onchange="same()">      <!--입력값이 화면에 보이지 않게 해준다.-->
+    <input type = "button" id = "see" value = "SHOW" onclick="show()">
+    <span>8자까지 가능합니다.</span>
+    <br/>
+    PW확인 : <input type = "password" id="PWCHECK" class = "PWCheck" placeholder="비밀번호를 다시 입력해주세요" onchange="same()">
+    <span id="same"></span> <!--글씨 크기 줄이기-->
+    <br/>
+    <input type = "submit" value = "확인" onclick="checkfield()">
+    <input type = "reset" value = "취소" onclick="location.href='/game/main'">
+</form>
+</body>
+<script src="/static/join.js"></script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<div class="log">
+    로고자리
+</div>
+<div class="login">
+    <table id="areaLogin">
+        <tr><td>아이디:</td><td><input type="text" id="LOID" value=""></td></tr>
+        <tr><td>비번:</td><td><input type="text" id="LOPW" value=""></td></tr>
+        <tr><td><input type = "button" id="login_on" value = "로그인" onclick="loginh()"></td></tr>
+    </table>
+
+
+
+    <table id=areaLogout style="display:none;">
+        <tr>
+            <td><div id=loginInfo></div></td>
+        </tr>
+        <tr><td><input type=button value="로그 아웃" onclick="fnLogout()"></td></tr>
+    </table>
+
+    <ul id="ghldnjs"> //회원가입
+        <li><button onclick="location.href='/game/join'">회원가입</button></li>
+        <li>아이디 / 비밀번호 찾기</li>
+    </ul>
+</div>
+
+<div class="game"> //랭킹
+    <img src="/static/game.jpg" width="300"; height="500px">
+</div>
+
+<div class="rank"> //랭킹
+    <button type="button"><img src="/static/rank.jpg" width="300"; height="500px" onclick="location.href='/game/ranking'"></button>
+</div>
+</body>
+<script src="/static/join.js"></script>
+</html>
